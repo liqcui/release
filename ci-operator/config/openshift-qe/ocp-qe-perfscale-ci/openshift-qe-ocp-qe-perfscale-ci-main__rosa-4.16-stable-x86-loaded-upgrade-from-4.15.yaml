@@ -22,7 +22,7 @@ promotion:
 releases:
   latest:
     release:
-      channel: stable
+      channel: candidate
       version: "4.16"
 resources:
   '*':
@@ -36,7 +36,7 @@ tests:
     allow_skip_on_success: true
     cluster_profile: aws-perfscale-qe
     env:
-      CHANNEL_GROUP: stable
+      CHANNEL_GROUP: candidate
       CHURN: "false"
       COMPUTE_MACHINE_TYPE: m5.2xlarge
       ENABLE_AUTOSCALING: "false"
