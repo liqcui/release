@@ -36,6 +36,7 @@ tests:
     allow_skip_on_success: true
     cluster_profile: aws-perfscale-qe
     env:
+      AVAILABLE_UPGRADE: "yes"
       CHANNEL_GROUP: candidate
       CHURN: "false"
       COMPUTE_MACHINE_TYPE: m5.2xlarge
@@ -44,12 +45,14 @@ tests:
       HOSTED_CP: "false"
       IDP_TIMEOUT: "1200"
       ITERATION_MULTIPLIER_ENV: "6"
+      LONG_CLUSTER_NAME_ENABLED: "true"
       MULTI_AZ: "true"
       OCM_LOGIN_ENV: staging
       OPENSHIFT_VERSION: "4.15"
       READY_WAIT_TIMEOUT: 30m
       REGION: us-west-2
       REPLICAS: "24"
+      UPGRADED_TO_VERSION: "4.16"
       USER_COUNT: "30"
     test:
     - ref: ipi-install-rbac
@@ -62,4 +65,4 @@ zz_generated_metadata:
   branch: main
   org: openshift-qe
   repo: ocp-qe-perfscale-ci
-  variant: rosa-4.16-stable-x86-loaded-upgrade-from-4.15
+  variant: rosa-4.16-candidate-x86-loaded-upgrade-from-4.15
