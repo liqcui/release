@@ -46,6 +46,7 @@ tests:
       ITERATION_MULTIPLIER_ENV: "6"
       LONG_CLUSTER_NAME_ENABLED: "true"
       MULTI_AZ: "true"
+      NODE_UPGRADE_TIMEOUT: "14400"
       OCM_LOGIN_ENV: staging
       OPENSHIFT_VERSION: "4.14"
       READY_WAIT_TIMEOUT: 30m
@@ -53,7 +54,6 @@ tests:
       REPLICAS: "24"
       UPGRADED_TO_VERSION: "4.15"
       ZONES_COUNT: "3"
-      NODE_UPGRADE_TIMEOUT: "14400"
     test:
     - ref: ipi-install-rbac
     - ref: openshift-cluster-bot-rbac
