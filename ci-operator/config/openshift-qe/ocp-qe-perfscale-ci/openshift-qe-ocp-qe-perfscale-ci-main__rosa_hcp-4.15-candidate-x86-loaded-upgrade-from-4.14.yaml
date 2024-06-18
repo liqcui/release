@@ -53,6 +53,7 @@ tests:
       REPLICAS: "24"
       UPGRADED_TO_VERSION: "4.15"
       ZONES_COUNT: "3"
+      NODE_UPGRADE_TIMEOUT: "14400"
     test:
     - ref: ipi-install-rbac
     - ref: openshift-cluster-bot-rbac
